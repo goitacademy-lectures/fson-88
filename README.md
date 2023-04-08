@@ -3,14 +3,14 @@
 Заняття 2:
 
 - Інструменти розробника: Chrome DevTools. Вкладки Elements, Console, Sources, Network.
-- Розмітка таблиць: `table`, `caption`, `tr`, `th || td`, `tbody || thead || tfoot`
-- Символьні підстановки (мнемоніки)
 - Верхні та нижні індекси `sup` та `sub`
 - Акцент на тексті `em || i` та виділення важливості `strong || b`
-- Час `time`
-- Адреса `address`
-- Розмітка медіаконтенту: `video` та `audio`
 - Тег `span`
+- Адреса `address`
+- Час `time`
+- Символьні підстановки (мнемоніки)
+- Розмітка медіаконтенту: `video` та `audio`
+- Розмітка таблиць: `table`, `caption`, `tr`, `th || td`, `tbody || thead || tfoot`
 
 ---
 
