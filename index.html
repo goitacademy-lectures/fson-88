@@ -9,46 +9,57 @@
       content="We are experts in trendy men’s haircuts. We work quickly, carefully and with style."
     />
     <title>Barber Shop</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
-    <header>
-      <a href="./index.html">
-        <img src="./images/header/logo.svg" alt="BarberShop logo" width="76" height="76" />
+    <header class="header">
+      <a class="header-logo link" href="./index.html">
+        <img
+          class="header-logo-img"
+          src="./images/header/logo.svg"
+          alt="BarberShop logo"
+          width="76"
+          height="76"
+        />
       </a>
-      <nav>
-        <ul>
-          <li>
-            <a href="">About</a>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li class="header-nav-item">
+            <a class="header-nav-link link" href="" style="color: red">About</a>
           </li>
-          <li>
-            <a href="">Services and prices</a>
+          <li class="header-nav-item">
+            <a class="header-nav-link link" href="">Services and prices</a>
           </li>
-          <li>
-            <a href="">Barbers</a>
+          <li class="header-nav-item">
+            <a class="header-nav-link link" href="">Barbers</a>
           </li>
-          <li>
-            <a href="">Contacts</a>
+          <li class="header-nav-item">
+            <a class="header-nav-link link" href="">Contacts</a>
           </li>
         </ul>
       </nav>
-      <a href="tel:+380441111111">+38 044 111 11 11</a>
-      <button type="button">Online-booking</button>
+      <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
+      <button class="header-btn" type="button">Online-booking</button>
     </header>
     <main>
       <!-- Hero section -->
-      <section>
-        <ul>
-          <li>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <section class="hero section">
+        <ul class="list">
+          <li class="item">
+            <a class="link" href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              >Instagram</a
+            >
           </li>
           <li>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a>
+            <a class="link" href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+              >Youtube</a
+            >
           </li>
         </ul>
         <p>A hair salon for men in Kyiv</p>
         <h1>BarberShop</h1>
-        <p>We are experts in trendy men’s haircuts. We work quickly, carefully and with style.</p>
+        <p> We are experts in trendy men’s haircuts. We work quickly, carefully and with style. </p>
         <!-- Slider controls -->
         <ul>
           <li>
@@ -60,13 +71,20 @@
         </ul>
       </section>
       <!-- About section -->
-      <section>
-        <ul>
-          <li>
-            <img src="./images/about/img-1.jpg" alt="Mustache trim" width="270" height="445" />
-          </li>
-          <li>
+      <section class="about section">
+        <ul class="about-list">
+          <li class="about-item">
             <img
+              class="about-img"
+              src="./images/about/img-1.jpg"
+              alt="Mustache trim"
+              width="270"
+              height="445"
+            />
+          </li>
+          <li class="about-item">
+            <img
+              class="about-img"
               src="./images/about/img-2.jpg"
               alt="Straight razor shave"
               width="270"
@@ -74,19 +92,21 @@
             />
           </li>
         </ul>
-        <p>About</p>
-        <h2>Best Barbershop in your city</h2>
-        <p>If you want to add more confidence to your image, you should visit us.</p>
-        <p>
+        <p class="about-uppertitle">About</p>
+        <h2 class="about-title">Best Barbershop in your city</h2>
+        <p class="about-subtitle"
+          >If you want to add more confidence to your image, you should visit us.</p
+        >
+        <p class="about-desc">
           We are a team that never stops at what has been achieved and are thirsty for changes. And
           when you fall into the hands of our master, you will never be the same again. We are a
           team that is always "on the same wave" with clients. Therefore, we are always ready to
           improve everyone who comes to us!
         </p>
-        <button type="button">Online-booking</button>
+        <button class="about-btn" type="button">Online-booking</button>
       </section>
       <!-- Price section -->
-      <section>
+      <section class="section">
         <p>Spend your time with the best masters</p>
         <h2>Services and prices</h2>
         <ul>
@@ -110,7 +130,7 @@
         <button type="button">Online-booking</button>
       </section>
       <!-- Benefits section -->
-      <section>
+      <section class="section">
         <ul>
           <li>
             <p>600<sup>&#43;</sup></p>
@@ -137,7 +157,7 @@
         </p>
       </section>
       <!-- Team section -->
-      <section>
+      <section class="section">
         <p>For true enjoyers of the atmosphere</p>
         <h2>Our barbers</h2>
         <ul>
@@ -174,7 +194,7 @@
         </ul>
       </section>
       <!-- Gallery section -->
-      <section>
+      <section class="section">
         <p>In Latin, "barba" means "beard"</p>
         <h2>BarberShop gallery</h2>
         <ul>
@@ -193,17 +213,22 @@
         </ul>
       </section>
       <!-- Booking section -->
-      <section></section>
+      <section class="section"></section>
       <!-- Contacts section -->
-      <section>
+      <section class="section">
         <h2>Contacts</h2>
         <address>
-          <a href="https://goo.gl/maps/16Kd6UP23zcWFSpF7" target="_blank" rel="noopener noreferrer">
+          <a
+            class="link"
+            href="https://goo.gl/maps/16Kd6UP23zcWFSpF7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             st. Vasylkivska, 7A <br />
             Kiev, 08132
           </a>
-          <a href="tel:+380441111111">+38 044 111 11 11</a>
-          <a href="mailto:barbershop@email.com">barbershop@email.com</a>
+          <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
+          <a class="link" href="mailto:barbershop@email.com">barbershop@email.com</a>
         </address>
 
         <h3>Working hours</h3>
@@ -218,10 +243,10 @@
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="media">
           <li class="media-item">
-            <a href="" class="media-link">Instagram</a>
+            <a class="link" href="" class="media-link">Instagram</a>
           </li>
           <li class="media-item">
-            <a href="" class="media-link">Youtube</a>
+            <a class="link" href="" class="media-link">Youtube</a>
           </li>
         </ul>
       </div>

@@ -1,0 +1,69 @@
+body {
+  color: #555555;
+  background: rgba(157, 164, 189, 0.6);
+}
+
+/**
+  |============================
+  | Base styles
+  |============================
+*/
+.section {
+}
+.list {
+}
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+/**
+  |============================
+  | Header styles
+  |============================
+*/
+.header {
+}
+.header-logo {
+}
+.header-logo-img {
+}
+.header-nav {
+}
+.header-nav-list {
+}
+.header-nav-item {
+}
+.header-nav-link {
+}
+.header-contact {
+}
+.header-btn {
+}
+/**
+  |============================
+  | About styles
+  |============================
+*/
+.about {
+}
+.about-list {
+}
+.about-item {
+}
+.about-img {
+}
+.about-uppertitle {
+}
+.about-title {
+}
+.about-subtitle {
+}
+.about-desc {
+}
+.about-btn {
+}
+/**
+  |============================
+  | Price styles
+  |============================
+*/
