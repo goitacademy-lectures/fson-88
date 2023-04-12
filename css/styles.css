@@ -41,6 +41,34 @@ body {
 }
 /**
   |============================
+  | Hero styles
+  |============================
+*/
+.hero {
+}
+.section {
+}
+.hero-list {
+}
+.hero-item {
+}
+.hero-link {
+}
+.hero-uppertitle {
+}
+.hero-title {
+}
+.hero-desc {
+}
+/* slider styles */
+.hero-controls {
+}
+.hero-controls-item {
+}
+.hero-controls-link {
+}
+/**
+  |============================
   | About styles
   |============================
 */
@@ -67,3 +95,119 @@ body {
   | Price styles
   |============================
 */
+.price {
+}
+.price-uppertitle {
+}
+.price-title {
+}
+.price-list {
+}
+.price-item {
+}
+.price-inner-list {
+}
+.price-inner-item {
+}
+.price-btn {
+}
+/**
+  |============================
+  | Benefits styles
+  |============================
+*/
+.benefits {
+}
+.benefits-list {
+}
+.benefits-item {
+}
+.benefits-quantity {
+}
+.benefits-mark {
+}
+.benefits-text {
+}
+.benefits-uppertitle {
+}
+.benefits-title {
+}
+.benefits-desc {
+}
+/**
+  |============================
+  | Team styles
+  |============================
+*/
+.team {
+}
+.team-uppertitle {
+}
+.team-title {
+}
+.team-list {
+}
+.team-item {
+}
+.team-img {
+}
+.team-subtitle {
+}
+.team-position {
+}
+/**
+  |============================
+  | Gallery styles
+  |============================
+*/
+.gallery {
+}
+.gallery-uppertitle {
+}
+.gallery-title {
+}
+.gallery-list {
+}
+.gallery-item {
+}
+.gallery-img {
+}
+/**
+  |============================
+  | Booking styles
+  |============================
+*/
+.booking {
+}
+/**
+  |============================
+  | Price styles
+  |============================
+*/
+.contacts {
+}
+.contacts-title {
+}
+.contacts-address {
+}
+.contacts-link {
+}
+.contacts-schedule-title {
+}
+.contacts-schedule-desc {
+}
+/**
+  |============================
+  | Footer styles
+  |============================
+*/
+.footer {
+}
+.footer-copyright {
+}
+.footer-list {
+}
+.footer-item {
+}
+.footer-link {
+}
