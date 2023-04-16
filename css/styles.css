@@ -9,7 +9,12 @@
   --light-txt-cl: #ffffff;
   --accent-txt-cl: #ff6c00;
 
+  --main-bg-cl: #111319;
   --accent-bg-cl: #ff6c00;
+
+  --gray-cl: rgb(157, 164, 189);
+  --gray-cl-60: rgba(157, 164, 189, 0.6);
+
   /* Others */
 }
 
@@ -47,7 +52,8 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+.section {
+}
 .uppertitle {
   font-weight: 600;
   font-size: 11px;
@@ -56,7 +62,9 @@ body {
 
   color: var(--secondary-txt-cl);
 }
-
+.uppertitle-light {
+  color: var(--gray-cl);
+}
 .title {
   font-family: var(--secondary-font);
   font-size: 42px;
@@ -94,7 +102,7 @@ body {
   |============================
 */
 .header {
-  background-color: #111319;
+  background-color: var(--main-bg-cl);
 }
 .header-logo {
 }
@@ -122,18 +130,13 @@ body {
 .header-contact:focus {
   color: var(--accent-txt-cl);
 }
-
-.header-btn {
-}
 /**
   |============================
   | Hero styles
   |============================
 */
 .hero {
-  background-color: #111319;
-}
-.section {
+  background-color: var(--main-bg-cl);
 }
 .hero-list {
 }
@@ -141,18 +144,48 @@ body {
 }
 .hero-link {
 }
-.hero-uppertitle {
-}
+
 .hero-title {
+  font-family: var(--secondary-font);
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: var(--light-txt-cl);
 }
 .hero-desc {
+  color: var(--gray-cl);
+}
+/* media links */
+.media {
+}
+.media-item {
+}
+.media-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: var(--secondary-txt-cl);
+}
+.media-link:hover,
+.media-link:focus {
+  color: var(--accent-txt-cl);
 }
 /* slider styles */
 .hero-controls {
 }
 .hero-controls-item {
 }
-.hero-controls-link {
+.hero-controls-btn {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+
+  color: var(--light-txt-cl);
+  background-color: transparent;
+  cursor: pointer;
 }
 /**
   |============================
@@ -167,13 +200,11 @@ body {
 }
 .about-img {
 }
-.about-uppertitle {
-}
-.about-title {
-}
 .about-subtitle {
 }
 .about-desc {
+  font-size: 14px;
+  line-height: 1.86;
 }
 .about-btn {
 }
@@ -183,7 +214,7 @@ body {
   |============================
 */
 .price {
-  background-color: #111319;
+  background-color: var(--main-bg-cl);
 }
 .price-uppertitle {
 }
@@ -196,6 +227,7 @@ body {
 .price-inner-list {
 }
 .price-inner-item {
+  color: var(--gray-cl);
 }
 .price-btn {
 }
@@ -211,10 +243,29 @@ body {
 .benefits-item {
 }
 .benefits-quantity {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: var(--secondary-txt-cl);
 }
 .benefits-mark {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+
+  color: var(--accent-txt-cl);
 }
 .benefits-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+
+  color: var(--secondary-txt-cl);
 }
 .benefits-uppertitle {
 }
@@ -240,8 +291,19 @@ body {
 .team-img {
 }
 .team-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  text-align: center;
+
+  color: var(--secondary-txt-cl);
 }
 .team-position {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+
+  color: var(--accent-txt-cl);
 }
 /**
   |============================
@@ -273,7 +335,7 @@ body {
   |============================
 */
 .contacts {
-  background-color: #111319;
+  background-color: var(--main-bg-cl);
 }
 .contacts-title {
 }
@@ -281,10 +343,12 @@ body {
   font-style: normal;
 }
 .contacts-link {
+  color: var(--gray-cl);
 }
 .contacts-schedule-title {
 }
 .contacts-schedule-desc {
+  color: var(--gray-cl);
 }
 /**
   |============================
@@ -294,10 +358,10 @@ body {
 .footer {
 }
 .footer-copyright {
-}
-.footer-list {
-}
-.footer-item {
-}
-.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.2em;
+  color: var(--gray-cl);
 }
