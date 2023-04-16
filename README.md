@@ -1,24 +1,27 @@
 # fson-88
 
-Заняття 4:
+Заняття 5:
 
-- CSS змінні
-- Властивості оформелння тексту:
-  - `text-align`
-  - `text-decoration`
-  - `text-transform`
-  - `text-indent`
-  - `line-height`
-  - `letter-spacing`
-  - `word-spacing`
-  - `text-shadow`
-- Сімейства шрифту `serif` та `sans-serif`
-- Властивості оформлення шрифту:
-  - `font-size`
-  - `font-weight`
-  - `font-style`
-  - `font-family`
-- Підключення зовнішніх шрифтів через `GoogleFonts`
+- Блокова модель елемента:
+  - `content`
+  - `padding`
+  - `border`
+  - `margin`
+- Властивості `width` та `height`
+- Модель візуального форматування: `box-sizing`
+- Нормалізація стилів
+- Геометрія елемента:
+  - `top`
+  - `right`
+  - `bottom`
+  - `left`
+- Схлопування і випадіння вертикальних маржинів
+- Рамки. Заокруглені рамки
+- Типи боксів: блокові, рядкові, рядково-блокові. Властивість `display`
+- Структурні псевдокласи:
+  - `:first-сhild` = `:last-сhild`
+  - `:nth-child()`
+  - `:nth-last-child()`
 
 ---
 
