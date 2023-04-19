@@ -1,0 +1,187 @@
+/* html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
+}
+
+/**
+  |============================
+  | Normalize vs Reset
+  |============================
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block;
+}
+/**
+  |============================
+  | Block model
+  |============================
+*/
+.text-block,
+.text-block-1 {
+  width: 400px;
+  min-height: 100px;
+
+  padding: 20px;
+  /* padding: 40px 100px; */
+  /* padding-left: 40px;
+  padding-right: 40px; */
+
+  /* padding: 0 40px; */
+  /* padding: -12px; */
+  /* padding: auto; */
+
+  border: 5px solid lightblue;
+  /* border-width: 10px 30px;
+  border-style: dashed dotted; */
+  /* border-color: lightblue teal hotpink transparent; */
+
+  /* border-radius: 0 0 20px 20px; */
+  /* border-radius: 50%; */
+
+  /* margin-left: auto;
+  margin-right: auto; */
+
+  margin: 0 auto;
+
+  /* margin-top: -20px; */
+}
+
+.text-block {
+  margin-bottom: 50px;
+}
+
+.text-block-1 {
+  margin-bottom: 20px;
+}
+
+.buttons-wrapper,
+.links-wrapper,
+.image-wrapper {
+  padding: 30px;
+
+  outline: 2px dashed red;
+  outline-offset: -2px;
+}
+.buttons-wrapper {
+  margin-bottom: 10px;
+}
+.links-wrapper {
+  margin-bottom: 40px;
+}
+.image-wrapper {
+}
+
+a {
+  border: 2px dashed lightblue;
+
+  padding: 40px;
+  display: inline-block;
+}
+
+/**
+  |============================
+  |
+  |============================
+*/
+.section {
+  padding-top: 20px;
+  /* padding-bottom: 20px; */
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+.item {
+  width: 250px;
+  height: 50px;
+  margin: 0 auto;
+
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+
+  background-color: lightgreen;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.desc {
+  font-size: 16px;
+  letter-spacing: 0.06em;
+}
+
+/* .item:first-child {
+  background-color: teal;
+}
+.item:last-child {
+  background-color: teal;
+} */
+.item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.item:nth-child(-n + 2),
+.item:nth-last-child(-n + 2) {
+  background-color: tomato;
+}
+
+/* .item:nth-child(2n + 5) {
+  background-color: tomato;
+} */
+
+/*
+  a - період циклу
+  n - лічильник циклу
+  b - зміщення при переборі
+*/
+/*
+.item:nth-child(even) {
+  background-color: teal;
+} */
+/*
+.item:nth-child(odd) {
+  margin-left: auto;
+}
+
+.item:first-child,
+.item:nth-child(n + 7) {
+  background-color: darkcyan;
+} */
