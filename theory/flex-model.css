@@ -1,0 +1,75 @@
+body {
+  padding-top: 50px;
+
+  font-family: sans-serif;
+}
+/* reset start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+/* reset end */
+
+.main-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.flex-container {
+  width: 800px;
+  min-height: 600px;
+  padding: 10px;
+  margin: 0 auto;
+
+  background-color: lightseagreen;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.flex-element {
+  width: 150px;
+  height: 150px;
+
+  font-size: 2em;
+  line-height: 150px;
+  color: white;
+  text-align: center;
+  background-color: darkcyan;
+  border: 2px solid teal;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+/**
+  |============================
+  | Flex box layout
+  |============================
+*/
+.flex-container {
+  /* Default properties */
+}
+
+.flex-element {
+  /* Default properties */
+}
