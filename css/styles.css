@@ -184,6 +184,7 @@ button {
   margin-right: 124px;
 }
 .header-logo-img {
+  fill: var(--secondary-txt-cl);
 }
 .header-nav {
   margin-right: auto;
@@ -253,12 +254,21 @@ button {
 
 .hero-title {
   margin-bottom: 20px;
+  width: fit-content;
 
   font-family: var(--secondary-font);
   font-size: 72px;
+
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--light-txt-cl);
+
+  /* font-size: 120px;
+  background-color: #833ab4;
+  background-image: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; */
 }
 .hero-desc {
   width: 360px;
@@ -459,7 +469,14 @@ button {
 }
 .team-img {
 }
+.team-wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .team-subtitle {
+  margin-bottom: 3px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
@@ -468,12 +485,53 @@ button {
   color: var(--secondary-txt-cl);
 }
 .team-position {
+  margin-bottom: 30px;
+
   font-size: 14px;
   line-height: 1.36;
   text-align: center;
 
   color: var(--accent-txt-cl);
 }
+/* socials icon */
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--light-txt-cl);
+  border-radius: 50%;
+
+  /* fill: var(--secondary-txt-cl); */
+  color: var(--secondary-txt-cl);
+}
+.socials-link:hover,
+.socials-link:focus {
+  /* fill: var(--accent-bg-cl); */
+  color: var(--accent-bg-cl);
+  background-color: #303030;
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+/* .socials-icon {
+  fill: var(--secondary-txt-cl);
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--accent-bg-cl);
+} */
 /**
   |============================
   | Gallery styles
@@ -531,7 +589,10 @@ button {
   font-style: normal;
 }
 .contacts-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
   color: var(--gray-cl);
 }
 .contacts-link:first-child {
@@ -559,4 +620,9 @@ button {
 
   letter-spacing: 0.2em;
   color: var(--gray-cl);
+}
+
+.astronaut {
+  --color1: var(--accent-bg-cl);
+  --color2: var(--light-txt-cl);
 }
