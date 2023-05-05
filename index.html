@@ -24,12 +24,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Animation on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
-    <header class="header">
+    <header class="header" data-header>
       <div class="header-container container">
         <a class="header-logo link" href="./index.html">
           <svg class="header-logo-img" width="76" height="76">
@@ -53,7 +55,9 @@
           </ul>
         </nav>
         <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="btn btn-light" type="button">Online-booking</button>
+        <button class="header-btn btn btn-light" type="button" data-modal-open
+          >Online-booking</button
+        >
       </div>
     </header>
     <main>
@@ -61,7 +65,7 @@
       <section class="hero">
         <div class="hero-container container">
           <div class="hero-left-side">
-            <ul class="media list">
+            <ul class="hero-media media list" data-desc="Hello I'm pseudo text">
               <li class="media-item">
                 <a
                   class="media-link link"
@@ -85,9 +89,11 @@
             </ul>
           </div>
           <div class="hero-right-side">
-            <p class="hero-uppertitle uppertitle uppertitle-light">A hair salon for men in Kyiv</p>
+            <p class="hero-uppertitle uppertitle uppertitle-light" style="--direction: -1"
+              >A hair salon for men in Kyiv</p
+            >
             <h1 class="hero-title">BarberShop</h1>
-            <p class="hero-desc">
+            <p class="hero-desc" style="--direction: 1">
               We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
@@ -437,7 +443,12 @@
           <p class="uppertitle">In Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">BarberShop gallery</h2>
           <ul class="gallery-list card-set list">
-            <li class="gallery-item card-set-item">
+            <li
+              class="gallery-item card-set-item"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="300"
+            >
               <img
                 class="gallery-img"
                 src="./images/gallery/img-1.jpg"
@@ -446,7 +457,12 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li
+              class="gallery-item card-set-item"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="600"
+            >
               <img
                 class="gallery-img"
                 src="./images/gallery/img-2.jpg"
@@ -455,7 +471,12 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li
+              class="gallery-item card-set-item"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="900"
+            >
               <img
                 class="gallery-img"
                 src="./images/gallery/img-3.jpg"
@@ -464,7 +485,12 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li
+              class="gallery-item card-set-item"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              data-aos-delay="1200"
+            >
               <img
                 class="gallery-img"
                 src="./images/gallery/img-4.jpg"
@@ -547,14 +573,20 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close-btn">
+        <button class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="12" height="12">
             <use href="./images/icons.svg#close-icon"></use>
           </svg>
         </button>
       </div>
     </div>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animation-on-scroll.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
