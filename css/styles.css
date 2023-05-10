@@ -1,4 +1,5 @@
 :root {
+  scroll-behavior: smooth;
   /* Fonts */
   --primary-font: 'Open Sans', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
@@ -277,6 +278,7 @@ button {
   transform: scaleX(100%);
 }
 .header-btn {
+  margin-right: 20px;
   animation: bounce-top 0.9s both;
 }
 @keyframes bounce-top {
@@ -360,16 +362,15 @@ button {
 }
 .hero-title {
   margin-bottom: 20px;
-  width: fit-content;
+  width: 444px;
 
   font-family: var(--secondary-font);
   font-size: 72px;
-
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--light-txt-cl);
-
   text-align: center;
+
   animation: tracking-in-expand 700ms cubic-bezier(0.215, 0.61, 0.355, 1) 2200ms both;
 }
 .hero-desc {
@@ -390,7 +391,6 @@ button {
   100% {
     opacity: 1;
     transform: translateY(0);
-    letter-spacing: 0.05em;
   }
 }
 @keyframes tracking-in-expand {
@@ -554,11 +554,21 @@ button {
 */
 .benefits {
 }
+.benefits-container {
+  display: flex;
+  gap: 30px;
+}
+.benefits-left-side {
+  flex-basis: 570px;
+}
 .benefits-list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
-  gap: 10px;
+
+  width: 370px;
+  margin: 0 auto;
 }
 .benefits-item {
   width: 170px;
@@ -567,6 +577,13 @@ button {
 
   background: #f7f7f7;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.benefits-item:nth-child(2n) {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.benefits-right-side {
+  flex-basis: 500px;
 }
 .benefits-quantity {
   font-weight: 700;
@@ -607,13 +624,9 @@ button {
 .team {
   background: #f7f7f7;
 }
-.team-uppertitle {
-}
 .team-title {
+  margin-bottom: 44px;
 }
-.team-list {
-}
-
 .team-thumb {
   position: relative;
   overflow: hidden;
@@ -683,12 +696,11 @@ button {
   border-radius: 50%;
 
   color: var(--secondary-txt-cl);
-  transition: color var(--anim-fast), background-color var(--anim-fast);
+  transition: color var(--anim-fast);
 }
 .socials-link:hover,
 .socials-link:focus {
   color: var(--accent-bg-cl);
-  background-color: #303030;
 }
 
 .socials-icon {
@@ -702,16 +714,12 @@ button {
 .gallery {
 }
 .gallery-uppertitle {
-}
-.gallery-title {
+  margin-bottom: 44px;
 }
 .gallery-list {
   --items: 4;
 }
-.gallery-item {
-}
-.gallery-img {
-}
+
 /**
   |============================
   | Booking styles
@@ -775,7 +783,14 @@ button {
 */
 .footer {
 }
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .footer-copyright {
+  padding: 52px 0;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;

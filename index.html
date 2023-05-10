@@ -41,16 +41,16 @@
         <nav class="header-nav">
           <ul class="header-nav-list list">
             <li class="header-nav-item">
-              <a class="header-nav-link link active" href="">About</a>
+              <a class="header-nav-link link active" href="#about">About</a>
             </li>
             <li class="header-nav-item">
-              <a class="header-nav-link link" href="">Services and prices</a>
+              <a class="header-nav-link link" href="#price">Services and prices</a>
             </li>
             <li class="header-nav-item">
-              <a class="header-nav-link link" href="">Barbers</a>
+              <a class="header-nav-link link" href="#team">Barbers</a>
             </li>
             <li class="header-nav-item">
-              <a class="header-nav-link link" href="">Contacts</a>
+              <a class="header-nav-link link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -109,7 +109,7 @@
         </div>
       </section>
       <!-- About section -->
-      <section class="about section">
+      <section class="about section" id="about">
         <div class="about-container container">
           <ul class="about-list list">
             <li class="about-item">
@@ -148,7 +148,7 @@
         </div>
       </section>
       <!-- Price section -->
-      <section class="price section">
+      <section class="price section" id="price">
         <div class="container">
           <p class="uppertitle uppertitle-light">Spend your time with the best masters</p>
           <h2 class="title title-light">Services and prices</h2>
@@ -192,38 +192,42 @@
       </section>
       <!-- Benefits section -->
       <section class="benefits section">
-        <div class="container">
-          <ul class="benefits-list list">
-            <li class="benefits-item">
-              <p class="benefits-quantity">600<sup class="benefits-mark">&#43;</sup></p>
-              <p class="benefits-text">Satisfied customers per day</p>
-            </li>
-            <li class="benefits-item">
-              <p class="benefits-quantity">50<sup class="benefits-mark">&#43;</sup></p>
-              <p class="benefits-text">Awards for excellent service</p>
-            </li>
-            <li class="benefits-item">
-              <p class="benefits-quantity">20<sup class="benefits-mark">&#43;</sup></p>
-              <p class="benefits-text">Kyiv’s best professional barbers</p>
-            </li>
-            <li class="benefits-item">
-              <p class="benefits-quantity">100<sup class="benefits-mark">&#43;</sup></p>
-              <p class="benefits-text">Gifts for regular customers</p>
-            </li>
-          </ul>
-          <p class="uppertitle">Old traditional school</p>
-          <h2 class="title">Why people come to us?</h2>
-          <p class="benefits-desc">
-            Only good things are said about us. But it's better to see and feel 1 time than read 10
-            times.
-          </p>
+        <div class="benefits-container container">
+          <div class="benefits-left-side">
+            <ul class="benefits-list list">
+              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="300">
+                <p class="benefits-quantity">600<sup class="benefits-mark">&#43;</sup></p>
+                <p class="benefits-text">Satisfied customers per day</p>
+              </li>
+              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="600">
+                <p class="benefits-quantity">50<sup class="benefits-mark">&#43;</sup></p>
+                <p class="benefits-text">Awards for excellent service</p>
+              </li>
+              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="900">
+                <p class="benefits-quantity">20<sup class="benefits-mark">&#43;</sup></p>
+                <p class="benefits-text">Kyiv’s best professional barbers</p>
+              </li>
+              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="1200">
+                <p class="benefits-quantity">100<sup class="benefits-mark">&#43;</sup></p>
+                <p class="benefits-text">Gifts for regular customers</p>
+              </li>
+            </ul>
+          </div>
+          <div class="benefits-right-side">
+            <p class="uppertitle">Old traditional school</p>
+            <h2 class="title">Why people come to&nbsp;us?</h2>
+            <p class="benefits-desc">
+              Only good things are said about us. But it's better to see and feel 1 time than read
+              10 times.
+            </p>
+          </div>
         </div>
       </section>
       <!-- Team section -->
-      <section class="team section">
+      <section class="team section" id="team">
         <div class="container">
           <p class="uppertitle">For true enjoyers of the atmosphere</p>
-          <h2 class="title">Our barbers</h2>
+          <h2 class="team-title title">Our barbers</h2>
           <ul class="team-list card-set list">
             <li class="team-item card-set-item">
               <div class="team-thumb">
@@ -301,13 +305,21 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img
-                class="team-img"
-                src="./images/team/img-2.jpg"
-                alt="Extreme barber Michele Doe"
-                widht="370"
-                height="346"
-              />
+              <div class="team-thumb">
+                <img
+                  class="team-img"
+                  src="./images/team/img-2.jpg"
+                  alt="Extreme barber Michele Doe"
+                  widht="370"
+                  height="346"
+                />
+                <div class="overlay">
+                  <p class="overlay-text">
+                    14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
+                    Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
+                  </p>
+                </div>
+              </div>
               <div class="team-wrapper">
                 <h3 class="team-subtitle">Michele Doe</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -368,13 +380,21 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img
-                class="team-img"
-                src="./images/team/img-3.jpg"
-                alt="Extreme barber Alan Black"
-                widht="370"
-                height="346"
-              />
+              <div class="team-thumb">
+                <img
+                  class="team-img"
+                  src="./images/team/img-3.jpg"
+                  alt="Extreme barber Alan Black"
+                  widht="370"
+                  height="346"
+                />
+                <div class="overlay">
+                  <p class="overlay-text">
+                    14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
+                    Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
+                  </p>
+                </div>
+              </div>
               <div class="team-wrapper">
                 <h3 class="team-subtitle">Alan Black</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -440,15 +460,10 @@
       <!-- Gallery section -->
       <section class="gallery section">
         <div class="container">
-          <p class="uppertitle">In Latin, "barba" means "beard"</p>
+          <p class="gallery-uppertitle uppertitle">In Latin, "barba" means "beard"</p>
           <h2 class="visually-hidden">BarberShop gallery</h2>
           <ul class="gallery-list card-set list">
-            <li
-              class="gallery-item card-set-item"
-              data-aos="fade-right"
-              data-aos-duration="600"
-              data-aos-delay="300"
-            >
+            <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="300">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-1.jpg"
@@ -457,12 +472,7 @@
                 height="360"
               />
             </li>
-            <li
-              class="gallery-item card-set-item"
-              data-aos="fade-right"
-              data-aos-duration="600"
-              data-aos-delay="600"
-            >
+            <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="600">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-2.jpg"
@@ -471,12 +481,7 @@
                 height="360"
               />
             </li>
-            <li
-              class="gallery-item card-set-item"
-              data-aos="fade-right"
-              data-aos-duration="600"
-              data-aos-delay="900"
-            >
+            <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="900">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-3.jpg"
@@ -485,12 +490,7 @@
                 height="360"
               />
             </li>
-            <li
-              class="gallery-item card-set-item"
-              data-aos="fade-right"
-              data-aos-duration="600"
-              data-aos-delay="1200"
-            >
+            <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="1200">
               <img
                 class="gallery-img"
                 src="./images/gallery/img-4.jpg"
@@ -508,7 +508,7 @@
           <h2 class="title title-light">Booking</h2>
         </section>
         <!-- Contacts section -->
-        <section class="contacts section">
+        <section class="contacts section" id="contacts">
           <h2 class="title title-light">Contacts</h2>
           <address class="contacts-address">
             <a
@@ -545,7 +545,7 @@
     </main>
     <!-- Footer section -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer-container container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="media list">
           <li class="media-item">
