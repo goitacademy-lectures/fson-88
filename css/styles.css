@@ -742,6 +742,18 @@ button {
 .booking {
   flex-basis: 570px;
 }
+.booking-form {
+}
+.booking-form-wrapper {
+}
+.booking-form-field {
+}
+.booking-form-input {
+}
+.booking-form-tag {
+}
+.booking-form-icon {
+}
 /**
   |============================
   | Price styles
@@ -835,7 +847,7 @@ button {
   transform: translateX(-50%) translateY(-50%);
 
   width: 450px;
-  height: 500px;
+  min-height: 500px;
 
   background-color: var(--light-txt-cl);
   border-radius: 10px;
@@ -868,4 +880,30 @@ button {
 }
 .modal-close-icon {
   fill: #ffffff;
+}
+.modal-title {
+}
+.modal-form {
+}
+.form {
+}
+.form-label {
+}
+.form-wrapper {
+}
+.form-field {
+}
+.form-icon {
+}
+.form-comment {
+}
+.form-agreement {
+}
+.form-check-input {
+}
+.form-agreement-text {
+}
+.form-agreement-link {
+}
+.form-btn {
 }

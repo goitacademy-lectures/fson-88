@@ -11,7 +11,7 @@
   - `tel`
   - `radio`
   - `checkbox`
-  - `number`,
+  - `number`
   - `range`
   - `date`
 - Атрибути `placeholder`, `checked`, `name`
