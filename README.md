@@ -1,22 +1,14 @@
 # fson-88
 
-Заняття 12:
+Заняття 13:
 
-- Оформлення стану елементів форми
-- Атрибути валідації:
-  - `required`
-  - `minlength || maxlength`
-  - `min || max`
-  - `pattern`
-- Псевдокласи стану:
-  - `:enabled || :disabled`
-  - `:checked`
-  - `:in-range || :out-of-range`
-  - `:required || :optional`
-  - `:valid || :invalid`
-- Псевдоелемент `::placeholder` і псевдоклас `:placeholder-shown`
-- Комбінування псевдокласів
-- Псевдоклас `:focus-within`
+- Медіа-запити: `media-type` та `media-feature`
+- Медіа-функції `min-width` та `max-width`
+- Логічні оператори: `and`, `not`, `or`
+- Метатег viewport. Атрибути `width=device-width` та `initial-scale`
+- `Chrome DevTools` для роботи з мобільною версткою
+- Адаптивна і респонсивна верстка
+- Підхід `mobile-first CSS`
 
 ---
 
