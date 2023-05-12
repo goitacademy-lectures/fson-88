@@ -12,14 +12,17 @@
 
   --main-bg-cl: #111319;
   --accent-bg-cl: #ff6c00;
+  --light-border-cl: #ffffff;
 
   --gray-cl: rgb(157, 164, 189);
+  --gray-cl-40: rgba(157, 164, 189, 0.4);
   --gray-cl-60: rgba(157, 164, 189, 0.6);
 
   /* Others */
   --indent: 30px;
   --items: 3;
 
+  --anim-superfast: 150ms ease-in;
   --anim-fast: 300ms ease-in;
   --anim-slow: 800ms ease;
 
@@ -742,17 +745,150 @@ button {
 .booking {
   flex-basis: 570px;
 }
-.booking-form {
-}
 .booking-form-wrapper {
+  display: flex;
+  gap: 30px;
+
+  margin-bottom: 44px;
 }
 .booking-form-field {
+  position: relative;
+  display: block;
+  flex-basis: 270px;
 }
-.booking-form-input {
+.booking-form-field::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+
+  width: 100%;
+  height: 1px;
+  background-color: var(--light-border-cl);
+  transform-origin: left center;
+  transition: transform var(--anim-fast), background-color var(--anim-fast);
+}
+.booking-form-field:has(.booking-form-input:focus)::after,
+.booking-form-field:has(.booking-form-input:not(:placeholder-shown))::after,
+.booking-form-field:has(.booking-form-message:focus)::after,
+.booking-form-field:has(.booking-form-message:not(:placeholder-shown))::after {
+  transform: scale(100%);
+}
+
+.booking-form-field:has(
+    .booking-form-input[type='text']:not(:placeholder-shown):required:invalid
+  )::after {
+  transform: scale(100%);
+  background-color: red;
+}
+.booking-form-field:has(
+    .booking-form-input[type='text']:not(:placeholder-shown):required:valid
+  )::after {
+  transform: scale(100%);
+  background-color: lightgreen;
+}
+
+.booking-form-input,
+.booking-form-message {
+  width: 100%;
+  height: 24px;
+  padding: 0;
+  padding-right: 24px;
+  padding-bottom: 4px;
+
+  font-size: 14px;
+  color: var(--gray-cl);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--gray-cl-40);
+  outline: transparent;
+
+  transition: border-color var(--anim-superfast);
+}
+.booking-form-input:focus,
+.booking-form-input:not(:placeholder-shown),
+.booking-form-message:focus,
+.booking-form-message:not(:placeholder-shown) {
+  border-color: transparent;
 }
 .booking-form-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray-cl-40);
+
+  transform-origin: left center;
+  transition: transform var(--anim-superfast), color var(--anim-superfast);
 }
+.booking-form-input:focus + .booking-form-tag,
+.booking-form-input:not(:placeholder-shown) + .booking-form-tag,
+.booking-form-message:focus + .booking-form-tag,
+.booking-form-message:not(:placeholder-shown) + .booking-form-tag {
+  transform: translateY(-100%) scale(0.8);
+  color: var(--light-txt-cl);
+}
+
+.booking-form-info,
 .booking-form-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) scale(0);
+  opacity: 0;
+  transition: opacity var(--anim-fast), fill var(--anim-fast), transform var(--anim-fast);
+}
+
+.booking-form-input:not(:placeholder-shown):required:invalid ~ .booking-form-info {
+  opacity: 1;
+  fill: red;
+  transform: translateY(-50%) scale(1);
+  transition-delay: 150ms;
+}
+.booking-form-input:not(:placeholder-shown):required:valid ~ .booking-form-info {
+  opacity: 1;
+  fill: lightgreen;
+  transform: translateY(-50%) scale(1);
+  transition-delay: 150ms;
+}
+/* phone validation styles */
+.valid-phone {
+  opacity: 1;
+  fill: lightgreen;
+  transform: translateY(-50%) scale(1);
+  transition-delay: 150ms;
+}
+.valid-field::after {
+  transform: scale(100%);
+  background-color: lightgreen;
+}
+.booking-form-message {
+  display: block;
+  width: 100%;
+  height: 76px;
+  padding: 6px 0;
+
+  resize: none;
+}
+
+.booking-form-message::placeholder {
+  opacity: 0;
+  transition: opacity var(--anim-fast);
+}
+
+.booking-form-message:focus::placeholder {
+  opacity: 1;
+  transition-delay: 300ms;
+}
+
+.booking-form-btn {
+  margin-top: 44px;
 }
 /**
   |============================
@@ -848,6 +984,7 @@ button {
 
   width: 450px;
   min-height: 500px;
+  padding: 30px;
 
   background-color: var(--light-txt-cl);
   border-radius: 10px;
@@ -882,28 +1019,120 @@ button {
   fill: #ffffff;
 }
 .modal-title {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  text-align: center;
 }
-.modal-form {
-}
-.form {
-}
+
 .form-label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 10px;
 }
 .form-wrapper {
+  position: relative;
+  margin-bottom: 10px;
 }
 .form-field {
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  padding-left: 46px;
+
+  outline: transparent;
+  outline-offset: -1px;
+  border-radius: 6px;
+  border: 1px solid;
+  transition: 400ms;
+}
+
+.form-field:focus {
+  outline: 1px solid var(--accent-bg-cl);
+  box-shadow: 0 0 0 4px rgba(255, 108, 0, 0.25);
 }
 .form-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: 400ms;
+  pointer-events: none;
+}
+.form-field:focus + .form-icon {
+  fill: #ff6c00;
 }
 .form-comment {
+  display: block;
+  width: 100%;
+  height: 100px;
+  padding: 14px;
+  margin-bottom: 20px;
+
+  resize: none;
+  border-radius: 6px;
+  outline: transparent;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
 }
 .form-agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  margin-bottom: 30px;
 }
 .form-check-input {
+  appearance: none;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--main-bg-cl);
+  border-radius: 2px;
+  outline: transparent;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.44558 0.255056C8.61838 0.089653 8.84834 -0.00178848 9.08693 2.65108e-05C9.32551 0.0018415 9.55407 0.0967713 9.72436 0.264784C9.89466 0.432797 9.99337 0.660752 9.99968 0.900549C10.006 1.14034 9.91939 1.37323 9.75816 1.55005L4.86357 7.70436C4.7794 7.79551 4.67782 7.86865 4.5649 7.91942C4.45198 7.97018 4.33003 7.99754 4.20636 7.99984C4.08268 8.00214 3.95981 7.97935 3.8451 7.93282C3.73038 7.88629 3.62618 7.81698 3.53872 7.72903L0.292827 4.46564C0.202435 4.38096 0.129933 4.27884 0.0796475 4.16537C0.0293621 4.05191 0.00232279 3.92942 0.000143182 3.80522C-0.00203643 3.68102 0.0206883 3.55765 0.0669613 3.44248C0.113234 3.3273 0.182108 3.22267 0.269473 3.13483C0.356838 3.047 0.460905 2.97775 0.575465 2.93123C0.690026 2.88471 0.812734 2.86186 0.936267 2.86405C1.0598 2.86624 1.18163 2.89343 1.29449 2.94398C1.40734 2.99454 1.50892 3.06743 1.59315 3.15831L4.16189 5.73967L8.42227 0.28219C8.42994 0.272694 8.43813 0.263635 8.4468 0.255056H8.44558Z' fill='%23ffffff'/%3E%3C/svg%3E");
+
+  transition: 200ms;
+}
+.form-check-input:checked {
+  background-color: #ff6c00;
+  border-color: #ff6c00;
+}
+.form-check-input:focus-visible {
+  box-shadow: 0 0 0 4px rgba(255, 108, 0, 0.25);
 }
 .form-agreement-text {
+  font-size: 12px;
+  user-select: none;
 }
 .form-agreement-link {
+  color: #ff6c00;
 }
 .form-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* svg checkbox */
+.unchecked {
+  opacity: 1;
+  transition: 300ms;
+}
+.checked {
+  opacity: 0;
+  transition: 300ms;
+}
+.form-check-input:checked + .form-custom-check > .unchecked {
+  opacity: 0;
+}
+.form-check-input:checked + .form-custom-check > .checked {
+  opacity: 1;
 }

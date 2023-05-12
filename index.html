@@ -509,25 +509,38 @@
           <form class="booking-form" name="booking_form">
             <div class="booking-form-wrapper">
               <label class="booking-form-field">
-                <input class="booking-form-input" type="text" name="user_name" />
+                <input
+                  class="booking-form-input"
+                  type="text"
+                  name="user_name"
+                  required
+                  minlength="3"
+                  placeholder="&nbsp;"
+                />
                 <span class="booking-form-tag">Name*</span>
-                <svg class="booking-form-icon" width="24" height="24">
+                <svg class="booking-form-info" width="20" height="20">
                   <use href="./images/icons.svg#circle-info"></use>
                 </svg>
               </label>
-              <label class="booking-form-field">
-                <input class="booking-form-input" type="tel" name="user_phone" />
+              <label class="booking-form-field" data-form-field>
+                <input
+                  class="booking-form-input"
+                  type="tel"
+                  name="user_phone"
+                  required
+                  placeholder="&nbsp;"
+                />
                 <span class="booking-form-tag">Phone*</span>
-                <svg class="booking-form-icon" width="24" height="24">
+                <svg class="booking-form-icon" width="20" height="20" data-form-icon>
                   <use href="./images/icons.svg#circle-info"></use>
                 </svg>
               </label>
             </div>
-            <label>
-              <textarea name="user_message" rows="6" placeholder="Type your message..."></textarea>
+            <label class="booking-form-field">
+              <textarea class="booking-form-message" name="user_message" rows="6"></textarea>
               <span class="booking-form-tag">Message</span>
             </label>
-            <button class="btn btn-light" type="submit">send</button>
+            <button class="booking-form-btn btn btn-light" type="submit">send</button>
           </form>
         </section>
         <!-- Contacts section -->
@@ -610,21 +623,21 @@
           <label class="form-label" for="modal_name">Name</label>
           <div class="form-wrapper">
             <input class="form-field" type="text" name="modal_name" id="modal_name" />
-            <svg class="form-icon" width="20" height="20">
+            <svg class="form-icon" width="26" height="26">
               <use href="./images/icons.svg#circle-user"></use>
             </svg>
           </div>
           <label class="form-label" for="modal_phone">Phone</label>
           <div class="form-wrapper">
             <input class="form-field" type="text" name="modal_phone" id="modal_phone" />
-            <svg class="form-icon" width="20" height="20">
+            <svg class="form-icon" width="26" height="26">
               <use href="./images/icons.svg#circle-phone"></use>
             </svg>
           </div>
           <label class="form-label" for="modal_email">Email</label>
           <div class="form-wrapper">
             <input class="form-field" type="text" name="modal_email" id="modal_email" />
-            <svg class="form-icon" width="20" height="20">
+            <svg class="form-icon" width="26" height="26">
               <use href="./images/icons.svg#circle-email"></use>
             </svg>
           </div>
@@ -639,10 +652,20 @@
           ></textarea>
 
           <label class="form-agreement">
-            <input class="form-check-input" type="checkbox" name="modal_agreement" />
+            <input
+              class="form-check-input visually-hidden"
+              type="checkbox"
+              name="modal_agreement"
+            />
+            <svg class="form-custom-check" width="16" height="16">
+              <use class="unchecked" href="./images/icons.svg#unchecked"></use>
+              <use class="checked" href="./images/icons.svg#checked"></use>
+            </svg>
             <span class="form-agreement-text"
               >I accept the terms and conditions of the
-              <a class="form-agreement-link" href="">Privacy Policy</a></span
+              <a class="form-agreement-link" href="" target="_blank" rel="noopener noreferrer"
+                >Privacy Policy</a
+              ></span
             >
           </label>
 
@@ -651,11 +674,13 @@
       </div>
     </div>
 
+    <!-- Mask for input -->
+    <script src="./js/inputmask.min.js"></script>
+    <script src="./js/form.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/animation-on-scroll.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/form.js"></script>
   </body>
 </html>
