@@ -643,12 +643,6 @@ button {
 
   color: var(--secondary-txt-cl);
 }
-.benefits-uppertitle {
-}
-.benefits-title {
-}
-.benefits-desc {
-}
 /**
   |============================
   | Team styles
@@ -657,12 +651,6 @@ button {
 .team {
   background-color: #f7f7f7;
 }
-/* @media only screen and (max-width: 1199px) {
-  .team {
-    display: none;
-  }
-} */
-
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .team-container {
     max-width: 480px;
@@ -760,27 +748,6 @@ button {
   | Gallery styles
   |============================
 */
-
-/* .features-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 72px 24px;
-}
-.features-item {
-  width: 396px;
-}
-
-@media only screen and (min-width: 768px) {
-  .features-item {
-    width: 356px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .features-item {
-    width: 264px;
-  }
-} */
-
 .gallery-uppertitle {
   margin-bottom: 44px;
 }
