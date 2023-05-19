@@ -25,19 +25,26 @@
       referrerpolicy="no-referrer"
     />
     <!-- Animation on scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
-    <!-- <header class="header" data-header>
+    <header class="header" data-header>
       <div class="header-container container">
         <a class="header-logo link" href="./index.html">
-          <svg class="header-logo-img" width="76" height="76">
+          <svg class="header-logo-img" width="76" height="50">
             <use href="./images/icons.svg#logo"></use>
           </svg>
         </a>
+
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="24" height="16">
+            <use href="./images/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
+
         <nav class="header-nav">
           <ul class="header-nav-list list">
             <li class="header-nav-item">
@@ -59,10 +66,10 @@
           Online-booking
         </button>
       </div>
-    </header> -->
+    </header>
     <main>
       <!-- Hero section -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="hero-container container">
           <div class="hero-left-side">
             <ul class="hero-media media list" data-desc="Hello I'm pseudo text">
@@ -107,28 +114,54 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- About section -->
-      <!-- <section class="about section" id="about">
+      <section class="about section" id="about">
         <div class="about-container container">
           <ul class="about-list list">
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./images/about/img-1.jpg"
-                alt="Mustache trim"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/img-1_desk@1x.jpg 1x, ./images/about/img-1_desk@2x.jpg 2x"
+                  type="image/"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/img-1_tab@1x.jpg 1x, ./images/about/img-1_tab@2x.jpg 2x"
+                  type="image/"
+                />
+                <img
+                  class="about-img"
+                  src="./images/about/img-1_tab@1x.jpg"
+                  alt="Mustache trim"
+                  width="330"
+                  height="235"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./images/about/img-2.jpg"
-                alt="Straight razor shave"
-                width="270"
-                height="445"
-              />
+              <pictute>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/img-2_desk@1x.jpg 1x, ./images/about/img-2_desk@2x.jpg 2x"
+                  type="image/"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/img-2_tab@1x.jpg 1x, ./images/about/img-2_tab@2x.jpg 2x"
+                  type="image/"
+                />
+                <img
+                  class="about-img"
+                  src="./images/about/img-2_tab@1x.jpg"
+                  alt="Straight razor shave"
+                  width="330"
+                  height="235"
+                  loading="lazy"
+                />
+              </pictute>
             </li>
           </ul>
           <div class="about-right-side">
@@ -146,9 +179,9 @@
             <button class="btn" type="button">Online-booking</button>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Price section -->
-      <!-- <section class="price section" id="price">
+      <section class="price section" id="price">
         <div class="container">
           <p class="uppertitle uppertitle-light">Spend your time with the best masters</p>
           <h2 class="title title-light">Services and prices</h2>
@@ -189,30 +222,10 @@
           </ul>
           <button class="price-btn btn btn-light" type="button">Online-booking</button>
         </div>
-      </section> -->
+      </section>
       <!-- Benefits section -->
-      <!-- <section class="benefits section">
+      <section class="benefits section">
         <div class="benefits-container container">
-          <div class="benefits-left-side">
-            <ul class="benefits-list list">
-              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="300">
-                <p class="benefits-quantity">600<sup class="benefits-mark">&#43;</sup></p>
-                <p class="benefits-text">Satisfied customers per day</p>
-              </li>
-              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="600">
-                <p class="benefits-quantity">50<sup class="benefits-mark">&#43;</sup></p>
-                <p class="benefits-text">Awards for excellent service</p>
-              </li>
-              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="900">
-                <p class="benefits-quantity">20<sup class="benefits-mark">&#43;</sup></p>
-                <p class="benefits-text">Kyiv’s best professional barbers</p>
-              </li>
-              <li class="benefits-item" data-aos="zoom-in" data-aos-delay="1200">
-                <p class="benefits-quantity">100<sup class="benefits-mark">&#43;</sup></p>
-                <p class="benefits-text">Gifts for regular customers</p>
-              </li>
-            </ul>
-          </div>
           <div class="benefits-right-side">
             <p class="uppertitle">Old traditional school</p>
             <h2 class="title">Why people come to&nbsp;us?</h2>
@@ -221,8 +234,28 @@
               10 times.
             </p>
           </div>
+          <div class="benefits-left-side">
+            <ul class="benefits-list card-set list">
+              <li class="benefits-item card-set-item" data-aos="zoom-in" data-aos-delay="300">
+                <p class="benefits-quantity">600<sup class="benefits-mark">&#43;</sup></p>
+                <p class="benefits-text">Satisfied customers per day</p>
+              </li>
+              <li class="benefits-item card-set-item" data-aos="zoom-in" data-aos-delay="600">
+                <p class="benefits-quantity">50<sup class="benefits-mark">&#43;</sup></p>
+                <p class="benefits-text">Awards for excellent service</p>
+              </li>
+              <li class="benefits-item card-set-item" data-aos="zoom-in" data-aos-delay="900">
+                <p class="benefits-quantity">20<sup class="benefits-mark">&#43;</sup></p>
+                <p class="benefits-text">Kyiv’s best professional barbers</p>
+              </li>
+              <li class="benefits-item card-set-item" data-aos="zoom-in" data-aos-delay="1200">
+                <p class="benefits-quantity">100<sup class="benefits-mark">&#43;</sup></p>
+                <p class="benefits-text">Gifts for regular customers</p>
+              </li>
+            </ul>
+          </div>
         </div>
-      </section> -->
+      </section>
       <!-- Team section -->
       <section class="team section" id="team">
         <div class="team-container container">
@@ -231,12 +264,29 @@
           <ul class="team-list card-set list">
             <li class="team-item card-set-item">
               <div class="team-thumb">
+                <!--
+                  size - 418px || dpr - 1
+                  frame = size * dpr = 425px * 1 = 425px
+
+                  size - 418px || dpr - 2
+                  frame = size * dpr = 418px * 2 = 836px
+                 -->
                 <img
                   class="team-img"
-                  src="./images/team/img-1.jpg"
+                  srcset="
+                    ./images/team/img-1_370.jpg 370w,
+                    ./images/team/img-1_418.jpg 418w,
+                    ./images/team/img-1_450.jpg 450w,
+                    ./images/team/img-1_740.jpg 740w,
+                    ./images/team/img-1_836.jpg 836w,
+                    ./images/team/img-1_900.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                  src="./images/team/img-1_450.jpg"
                   alt="Extreme barber John Smith"
-                  widht="370"
+                  widht="450"
                   height="346"
+                  loading="lazy"
                 />
                 <div class="overlay">
                   <p class="overlay-text">
@@ -308,10 +358,20 @@
               <div class="team-thumb">
                 <img
                   class="team-img"
-                  src="./images/team/img-2.jpg"
+                  srcset="
+                    ./images/team/img-2_370.jpg 370w,
+                    ./images/team/img-2_418.jpg 418w,
+                    ./images/team/img-2_450.jpg 450w,
+                    ./images/team/img-2_740.jpg 740w,
+                    ./images/team/img-2_836.jpg 836w,
+                    ./images/team/img-2_900.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                  src="./images/team/img-2_450.jpg"
                   alt="Extreme barber Michele Doe"
-                  widht="370"
+                  widht="450"
                   height="346"
+                  loading="lazy"
                 />
                 <div class="overlay">
                   <p class="overlay-text">
@@ -383,10 +443,20 @@
               <div class="team-thumb">
                 <img
                   class="team-img"
-                  src="./images/team/img-3.jpg"
+                  srcset="
+                    ./images/team/img-3_370.jpg 370w,
+                    ./images/team/img-3_418.jpg 418w,
+                    ./images/team/img-3_450.jpg 450w,
+                    ./images/team/img-3_740.jpg 740w,
+                    ./images/team/img-3_836.jpg 836w,
+                    ./images/team/img-3_900.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                  src="./images/team/img-3_450.jpg"
                   alt="Extreme barber Alan Black"
-                  widht="370"
+                  widht="450"
                   height="346"
+                  loading="lazy"
                 />
                 <div class="overlay">
                   <p class="overlay-text">
@@ -464,40 +534,256 @@
           <h2 class="visually-hidden">BarberShop gallery</h2>
           <ul class="gallery-list card-set list">
             <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="300">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-1.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-1_desk@1x.webp 1x,
+                    ./images/gallery/img-1_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-1_desk@1x.jpg 1x,
+                    ./images/gallery/img-1_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-1_tab@1x.webp 1x,
+                    ./images/gallery/img-1_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-1_tab@1x.jpg 1x,
+                    ./images/gallery/img-1_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-1_mob@1x.webp 1x,
+                    ./images/gallery/img-1_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-1_mob@1x.jpg 1x,
+                    ./images/gallery/img-1_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-1_mob@1x.jpg"
+                  alt=""
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="600">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-2.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-2_desk@1x.webp 1x,
+                    ./images/gallery/img-2_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-2_desk@1x.jpg 1x,
+                    ./images/gallery/img-2_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-2_tab@1x.webp 1x,
+                    ./images/gallery/img-2_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-2_tab@1x.jpg 1x,
+                    ./images/gallery/img-2_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-2_mob@1x.webp 1x,
+                    ./images/gallery/img-2_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-2_mob@1x.jpg 1x,
+                    ./images/gallery/img-2_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-2_mob@1x.jpg"
+                  alt=""
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="900">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-3.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-3_desk@1x.webp 1x,
+                    ./images/gallery/img-3_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-3_desk@1x.jpg 1x,
+                    ./images/gallery/img-3_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-3_tab@1x.webp 1x,
+                    ./images/gallery/img-3_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-3_tab@1x.jpg 1x,
+                    ./images/gallery/img-3_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-3_mob@1x.webp 1x,
+                    ./images/gallery/img-3_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-3_mob@1x.jpg 1x,
+                    ./images/gallery/img-3_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-3_mob@1x.jpg"
+                  alt=""
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-delay="1200">
-              <img
-                class="gallery-img"
-                src="./images/gallery/img-4.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-4_desk@1x.webp 1x,
+                    ./images/gallery/img-4_desk@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/gallery/img-4_desk@1x.jpg 1x,
+                    ./images/gallery/img-4_desk@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-4_tab@1x.webp 1x,
+                    ./images/gallery/img-4_tab@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/img-4_tab@1x.jpg 1x,
+                    ./images/gallery/img-4_tab@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-4_mob@1x.webp 1x,
+                    ./images/gallery/img-4_mob@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/img-4_mob@1x.jpg 1x,
+                    ./images/gallery/img-4_mob@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/img-4_mob@1x.jpg"
+                  alt=""
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
         </div>
@@ -678,14 +964,106 @@
         </form>
       </div>
     </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li><a href="" class="link">About</a></li>
+        <li><a href="" class="link">Products</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+      </ul>
+
+      <ul class="mobile-contacts list">
+        <li><a href="tel:110001111111" class="link">+11 (000) 111-11-11</a></li>
+        <li><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+      </ul>
+
+      <ul class="mobile-socials socials list">
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram icon"
+          >
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter icon"
+          >
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook icon"
+          >
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Linkedin icon"
+          >
+            <svg class="socials-icon" width="20" height="20">
+              <use href="./images/icons.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <!-- Mask for input -->
-    <script src="./js/inputmask.min.js"></script>
-    <script src="./js/form.js"></script>
+    <!-- <script src="./js/inputmask.min.js"></script> -->
+    <!-- <script src="./js/form.js"></script> -->
     <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/animation-on-scroll.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- <script src="./js/animation-on-scroll.js"></script> -->
     <script src="./js/header.js"></script>
-    <script src="./js/modal.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
+    <!-- Mobile menu scripts -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
